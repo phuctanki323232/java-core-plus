@@ -1,7 +1,5 @@
 package lesson4;
 
-import com.sun.scenario.effect.impl.sw.java.JSWColorAdjustPeer;
-
 import java.util.Scanner;
 
 public class ArrayExample {
