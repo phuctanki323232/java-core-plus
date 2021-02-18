@@ -19,7 +19,7 @@ public class Activity46 {
         getSandwich(sandwich);
     }
 
-    private static String daochuoi (String mid) {
+    private static String Reverse(String mid) {
         int length = mid.length();
         char[] characters = mid.toCharArray();
         char[] characters2 = new char[length];
@@ -31,17 +31,17 @@ public class Activity46 {
     }
 
     private static void getSandwich(String sandwich) {
-        int firstPiece = 0, lastPiece = 0;
+        int firstPiece, lastPiece;
         firstPiece = sandwich.indexOf("bread");
         lastPiece = sandwich.lastIndexOf("bread");
         if (lastPiece == 0 || lastPiece == firstPiece) {
-            System.out.println("");
+            System.out.println();
         } else {
             String mid = sandwich.substring(firstPiece, lastPiece);
-            mid = daochuoi(mid);
+            mid = Reverse(mid);
             int firstPiece2 = mid.indexOf("daerb");
             mid = mid.substring(0, firstPiece2);
-            mid = daochuoi(mid);
+            mid = Reverse(mid);
             System.out.println(mid);
         }
     }
