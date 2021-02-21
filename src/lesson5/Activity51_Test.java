@@ -13,6 +13,7 @@ public class Activity51_Test {
         System.out.print("Nhap vao chieu rong: ");
         float width = scanner.nextFloat();
         rectangle.setWidth(width);
+        //Activity51_Rectangle rectangle = new Activity51_Rectangle(width, height);
 
         System.out.println("Kich thuoc cua hinh chu nhat la: ");
         rectangle.printKichthuoc();

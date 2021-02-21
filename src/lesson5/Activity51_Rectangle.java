@@ -18,6 +18,17 @@ public class Activity51_Rectangle {
     private float width;
     private float height;
 
+    // khoi tao
+
+
+    public Activity51_Rectangle(float width, float height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public Activity51_Rectangle() {
+    }
+
     //Getter, Setter
     public float getWidth() {
         return width;
