@@ -39,7 +39,8 @@ public class Activity52_Test {
         System.out.println("\nSv thap nhat:");
         lowestStudent.printInfo();
 
-        System.out.println("\nSố Sv pass: " + st.soSvPass());
-        System.out.println("Số Sv khong pass: " + st.soSvNotPass());
+        CheckResult result = st.checkPassOrFail();
+        System.out.println("\nSo Sv PASS: " +  result.getNumOfPass());
+        System.out.println("So Sv Fail: " + result.getNumOfFail());
     }
 }

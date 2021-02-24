@@ -26,14 +26,17 @@ public class StudentManagement {
     }
 
     // Đếm tổng số sinh viên đỗ.
-    public int soSvPass() {
-        int count = 0;
+    public CheckResult checkPassOrFail() {
+        int numOfPass = 0;
         for (Student student : students) {
             if(student.checkPass()){
-                count++;
+                numOfPass++;
             }
         }
-        return count;
+
+        int numOfFail = numOfStudent - numOfPass;
+        CheckResult checkResult = new CheckResult(numOfPass, numOfFail);
+        return checkResult;
     }
 
     // Đếm tổng số sinh viên trượt.
