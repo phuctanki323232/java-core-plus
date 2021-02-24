@@ -11,25 +11,35 @@ import java.util.Scanner;
 
 public class Activity52_Test {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nhap so sinh vien: ");
+        System.out.print("Nhap so luong sv: ");
         int n = scanner.nextInt();
-        StudentManagement studentManagement = new StudentManagement();
-        studentManagement.n = n;
-        // Nhap Thong tin Sinh vien
-        studentManagement.nhapThongtin();
+        scanner.nextLine();
 
-        // In ra tổng số sinh viên đỗ.
-        System.out.print("\nTong so sinh vien do: " + studentManagement.soSvPass());
+        Student[] students = new Student[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Nhap ten sv thu " + (i+1)+ ": ");
+            String name = scanner.nextLine();
+            System.out.print("Nhap gpa sv thu " + (i+1)+ ": ");
+            float gpa = scanner.nextFloat();
+            scanner.nextLine();
 
-        // In ra tổng số sinh viên trượt.
-        System.out.print("\nTong so sinh vien truot: " + studentManagement.soSvNotPass());
+            students[i] = new Student(name, gpa);
+        }
 
-        // In ra thông tin sinh viên có điểm GPA cao nhất.
-        studentManagement.SvGpaMax();
+        StudentManagement st = new StudentManagement(students);
 
-        // In ra thông tin sinh viên có điểm GPA thấp nhất.
-        studentManagement.SvGpaMin();
+        Student highestStudent = st.SvGpaMax();
+        System.out.println("Sv cao nhat:");
+        highestStudent.printInfo();
+
+        Student lowestStudent = st.SvGpaMin();
+        System.out.println("\nSv thap nhat:");
+        lowestStudent.printInfo();
+
+        System.out.println("\nSố Sv pass: " + st.soSvPass());
+        System.out.println("Số Sv khong pass: " + st.soSvNotPass());
     }
 }

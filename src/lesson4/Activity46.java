@@ -19,29 +19,14 @@ public class Activity46 {
         getSandwich(sandwich);
     }
 
-    private static String Reverse(String mid) {
-        int length = mid.length();
-        char[] characters = mid.toCharArray();
-        char[] characters2 = new char[length];
-        for (int i = length - 1; i >= 0; i--) {
-            characters2[length - 1 - i] = characters[i];
-        }
-        mid = new String(characters2);
-        return mid;
-    }
-
     private static void getSandwich(String sandwich) {
         int firstPiece, lastPiece;
         firstPiece = sandwich.indexOf("bread");
         lastPiece = sandwich.lastIndexOf("bread");
-        if (lastPiece == 0 || lastPiece == firstPiece) {
+        if (lastPiece == firstPiece) {
             System.out.println();
         } else {
-            String mid = sandwich.substring(firstPiece, lastPiece);
-            mid = Reverse(mid);
-            int firstPiece2 = mid.indexOf("daerb");
-            mid = mid.substring(0, firstPiece2);
-            mid = Reverse(mid);
+            String mid = sandwich.substring(firstPiece + 5, lastPiece);
             System.out.println(mid);
         }
     }

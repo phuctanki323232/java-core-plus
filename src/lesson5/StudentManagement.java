@@ -14,29 +14,22 @@ package lesson5;
 import java.util.Scanner;
 
 public class StudentManagement {
-    public int n; // so Sinh vien
+    private int numOfStudent; // so Sinh vien
     private Student[] students;
 
-    // Nhập vào thông tin từng sinh viên khi khởi tạo lớp.
-    public void nhapThongtin() {
-        Scanner scanner = new Scanner(System.in);
-        students = new Student[n];
-        for (int i = 0; i < n; i++) {
-            System.out.print("Nhap ten sinh vien thu " + (i+1) + ": ");
-            String name = scanner.nextLine();
-            System.out.print("Nhap GPA sinh vien thu " +(i+1) +": ");
-            float gpa = scanner.nextFloat();
-            scanner.nextLine();
+    // khởi tạo
 
-            students[i] = new Student(name, gpa);
-        }
+
+    public StudentManagement(Student[] students) {
+        this.students = students;
+        numOfStudent = students.length;
     }
 
     // Đếm tổng số sinh viên đỗ.
     public int soSvPass() {
         int count = 0;
-        for (int i = 0; i < n; i++) {
-            if(students[i].checkPass()){
+        for (Student student : students) {
+            if(student.checkPass()){
                 count++;
             }
         }
@@ -46,8 +39,8 @@ public class StudentManagement {
     // Đếm tổng số sinh viên trượt.
     public int soSvNotPass(){
         int count = 0;
-        for (int i = 0; i < n; i++) {
-            if (students[i].checkPass() == false) {
+        for (Student student : students) {
+            if (!student.checkPass()) {
                 count++;
             }
         }
@@ -55,30 +48,28 @@ public class StudentManagement {
     }
 
     // Tìm sinh viên có điểm gpa cao nhất.
-    public void SvGpaMax(){
-        Student gpaMax = students[0];
-        int max = 0;
-        for (int i = 0; i < n; i++) {
-            if (gpaMax.getGpa() < students[i].getGpa()){
-                gpaMax = students[i];
-                max = i;
+    public Student SvGpaMax(){
+        float max = students[0].getGpa();
+        Student result = students[0];
+        for (Student student : students) {
+            if (student.getGpa() > max){
+                result = student;
+                max = student.getGpa();
             }
         }
-        System.out.println("\n\nSinh vien co Gpa lon nhat:");
-        students[max].printInfo();
+        return result;
     }
 
     // Tìm sinh viên có điểm gpa thấp nhất.
-    public void SvGpaMin() {
-        Student gpaMin = students[0];
-        int min = 0;
-        for (int i = 0; i < n; i++) {
-            if (gpaMin.getGpa() > students[i].getGpa()){
-                gpaMin = students[i];
-                min = i;
+    public Student SvGpaMin() {
+        float min = students[0].getGpa();
+        Student result = students[0];
+        for (Student student : students) {
+            if (student.getGpa() < min) {
+                result = student;
+                min = student.getGpa();
             }
         }
-        System.out.println("\nSinh vien co Gpa bé nhat:");
-        students[min].printInfo();
+        return result;
     }
 }
