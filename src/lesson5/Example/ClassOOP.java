@@ -1,4 +1,6 @@
-package lesson5;
+package lesson5.Example;
+
+import lesson5.Example.TeacherOOP;
 
 public class ClassOOP {
     private String name;

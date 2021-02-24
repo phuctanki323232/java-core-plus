@@ -1,4 +1,6 @@
-package lesson5;
+package lesson5.Activity51;
+
+import lesson5.Activity51.Activity51_Rectangle;
 
 import java.util.Scanner;
 

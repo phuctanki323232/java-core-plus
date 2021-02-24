@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.Activity52;
 
 public class CheckResult {
     private int numOfPass;

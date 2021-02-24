@@ -5,7 +5,7 @@
         + In ra thông tin sinh viên có điểm GPA cao nhất.
         + In ra thông tin sinh viên có điểm GPA thấp nhất.*/
 
-package lesson5;
+package lesson5.Activity52;
 
 import java.util.Scanner;
 

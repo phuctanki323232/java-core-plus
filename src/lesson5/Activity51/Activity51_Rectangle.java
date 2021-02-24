@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.Activity51;
 
 /*Viết lớp Rectangle  có:
         - Các thuộc tính:

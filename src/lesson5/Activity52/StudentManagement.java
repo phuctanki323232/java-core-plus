@@ -9,9 +9,7 @@
         + Tìm sinh viên có điểm gpa cao nhất.
         + Tìm sinh viên có điểm gpa thấp nhất.*/
 
-package lesson5;
-
-import java.util.Scanner;
+package lesson5.Activity52;
 
 public class StudentManagement {
     private int numOfStudent; // so Sinh vien

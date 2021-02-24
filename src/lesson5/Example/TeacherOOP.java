@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.Example;
 
 public class TeacherOOP {
     private String name;

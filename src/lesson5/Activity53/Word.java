@@ -7,12 +7,21 @@
         - Getter/Setter
         Constructor*/
 
-package lesson5;
+package lesson5.Activity53;
 
 public class Word {
     private String key;
     private String value;
     private String type; // AV or VA
+
+    public Word(String key, String value, String type) {
+        this.key = key;
+        this.value = value;
+        this.type = type;
+    }
+
+    public Word() {
+    }
 
     public String getKey() {
         return key;
@@ -36,14 +45,5 @@ public class Word {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public Word(String key, String value, String type) {
-        this.key = key;
-        this.value = value;
-        this.type = type;
-    }
-
-    public Word() {
     }
 }

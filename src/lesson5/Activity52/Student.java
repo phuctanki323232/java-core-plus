@@ -7,7 +7,7 @@
         + Kiểm tra đỗ/trượt (gpa >=1.5 thì đỗ, ngược lại thì trượt).
         + In ra thông tin name, gpa.*/
 
-package lesson5;
+package lesson5.Activity52;
 
 public class Student {
     private String name;

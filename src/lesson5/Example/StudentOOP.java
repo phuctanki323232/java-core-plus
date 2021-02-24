@@ -1,6 +1,8 @@
-package lesson5;
+package lesson5.Example;
 
 // lấy hàm getter và setter: ALt + Insert
+
+import lesson5.Example.TeacherOOP;
 
 public class StudentOOP {
     private String name;
