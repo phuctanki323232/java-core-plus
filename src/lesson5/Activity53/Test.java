@@ -17,7 +17,7 @@ public class Test {
 
         Word[] words = new Word[numOfWord];
 
-        for(int i = 0; i < numOfWord; i++) {
+        for (int i = 0; i < numOfWord; i++) {
             System.out.print("\nKey: ");
             String key = scanner.nextLine();
             System.out.print("Value: ");

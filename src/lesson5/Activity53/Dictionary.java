@@ -16,27 +16,27 @@ public class Dictionary {
     // Tìm kiếm nghĩa của từ theo key và type
     public String find(String keyWord, String typeWord) {
         for (Word word : words) {
-            if (word.getKey().equals(keyWord) && word.getType().equals(typeWord)){
+            if (word.getKey().equals(keyWord) && word.getType().equals(typeWord)) {
                 return word.getValue();
             }
         }
         return "Khong tra cuu duoc!";
     }
 
-    public int numOfVEWord(){
+    public int numOfVEWord() {
         int count = 0;
         for (Word word : words) {
-            if (word.getType().equals("VE")){
+            if (word.getType().equals("VE")) {
                 count++;
             }
         }
         return count;
     }
 
-    public int numOFEVWord(){
+    public int numOFEVWord() {
         int count = 0;
         for (Word word : words) {
-            if (word.getType().equals("EV")){
+            if (word.getType().equals("EV")) {
                 count++;
             }
         }
