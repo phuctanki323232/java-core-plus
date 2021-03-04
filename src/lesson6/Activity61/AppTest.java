@@ -44,10 +44,17 @@ public class AppTest {
                 nhanViens[i] = new NhanVienPartTime(name, age, sex, soGioLam);
             }
         }
+        System.out.println();
 
-        for (NhanVien nhanVien : nhanViens) {
-            nhanVien.printInformation();
-            System.out.print("Luong: " + nhanVien.tinhLuong() + "\n\n");
+        // tra cuu nhan vien
+        System.out.print("Nhap ten nv muon tim: ");
+        String nameToFind = scanner.nextLine();
+
+        for (int i = 0; i < soLuongNhanVien; i++) {
+            if (nhanViens[i].getName().equals(nameToFind)) {
+                nhanViens[i].printInformation();
+                System.out.println("Luong: " + nhanViens[i].tinhLuong());
+            }
         }
     }
 }

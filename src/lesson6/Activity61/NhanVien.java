@@ -32,6 +32,8 @@ public class NhanVien {
         System.out.println("Sex: " + sex);
     }
 
+
+
     public int tinhLuong() {
         return 1600000;
     }
