@@ -54,6 +54,7 @@ public class AppTest {
             if (nhanViens[i].getName().equals(nameToFind)) {
                 nhanViens[i].printInformation();
                 System.out.println("Luong: " + nhanViens[i].tinhLuong());
+
             }
         }
     }
