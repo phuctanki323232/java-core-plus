@@ -2,17 +2,15 @@ package lesson8.Activity;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Activity81 {
     public static void main(String[] args) {
-        int n = 100000;
-        long start;
+        long start, finish;
 
-        List<Integer> arrayList = new ArrayList<>();
-        List<Integer> linkedList = new LinkedList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        LinkedList<Integer> linkedList = new LinkedList<>();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < 100000; i++) {
             arrayList.add(i);
             linkedList.add(i);
         }
@@ -20,30 +18,47 @@ public class Activity81 {
         // tinh thoi gian truy cap
         // Test ArrayList
         start = System.nanoTime();
-        arrayList.get(n / 2);
-        System.out.println("time Array get MIDDLE element: " + (System.nanoTime() - start));
+        arrayList.get(50000);
+        finish = System.nanoTime();
+        System.out.println("time Array get MIDDLE element: " + (finish - start));
 
         // Test linkedList
         start = System.nanoTime();
-        linkedList.get(n / 2);
-        System.out.println("time Linked get MIDDLE element: " + (System.nanoTime() - start));
+        linkedList.get(50000);
+        finish = System.nanoTime();
+        System.out.println("time Linked get MIDDLE element: " + (finish - start));
 
         // tinh thoi gian them phan tu
         start = System.nanoTime();
-        arrayList.set(n / 2, 10);
-        System.out.println("\ntime Array set MIDDLE element: " + (System.nanoTime() - start));
+        arrayList.set(50000, 10);
+        finish = System.nanoTime();
+        System.out.println("\ntime Array set MIDDLE element: " + (finish - start));
 
         start = System.nanoTime();
-        linkedList.set(n / 2, 10);
-        System.out.println("time Linked set MIDDLE element: " + (System.nanoTime() - start));
+        linkedList.set(50000, 10);
+        finish = System.nanoTime();
+        System.out.println("time Linked set MIDDLE element: " + (finish - start));
 
         // Tinh thoi gian xoa phan tu giua
         start = System.nanoTime();
-        arrayList.remove(n / 2);
-        System.out.println("\ntime Array remove MIDDLE element: " + (System.nanoTime() - start));
+        arrayList.remove(50000);
+        finish = System.nanoTime();
+        System.out.println("\ntime Array remove MIDDLE element: " + (finish - start));
 
         start = System.nanoTime();
-        linkedList.remove(n / 2);
-        System.out.println("time Linked remove MIDDLE element: " + (System.nanoTime() - start));
+        linkedList.remove(50000);
+        finish = System.nanoTime();
+        System.out.println("time Linked remove MIDDLE element: " + (finish - start));
+
+        // Tinh thoi gian them phan tu ở giữa
+        start = System.nanoTime();
+        arrayList.add(5, 50000);
+        finish = System.nanoTime();
+        System.out.println("\ntime Array add MIDDLE element: " + (finish - start));
+
+        start = System.nanoTime();
+        linkedList.add(5, 50000);
+        finish = System.nanoTime();
+        System.out.println("time Linked add MIDDLE element: " + (finish - start));
     }
 }

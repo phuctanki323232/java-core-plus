@@ -1,14 +1,12 @@
 package lesson8.Example;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 public class Array {
     public static void main(String[] args) {
 
         // khai bao
-        ArrayList<Integer> myArrayList = new ArrayList<Integer>();
+        ArrayList<Integer> myArrayList = new ArrayList<>();
         //ArrayList myArrayList = new ArrayList<>();
         myArrayList.add(2);
         myArrayList.add(3);
